@@ -19,4 +19,4 @@ Autores:
 Christell Magaly Romo Garcia 
 
 Agradecimientos:
-A codigo facilito mi profesores y compañer@s
+A codigo facilito mis profesores y compañer@s
