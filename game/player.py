@@ -9,8 +9,8 @@ class Player(pygame.sprite.Sprite):
 
 
         self.images = (
-            pygame.image.load(os.path.join(dir_images, "caminando.png") ),
-            pygame.image.load(os.path.join(dir_images, "saltando.png") )
+            pygame.image.load(os.path.join(dir_images, "player\corriendo.png") ),
+            pygame.image.load(os.path.join(dir_images, "player\saltando.png") )
         )
 
         self.image = self.images [0]
@@ -30,11 +30,11 @@ class Player(pygame.sprite.Sprite):
         if objects:
             return objects[0]
 
-    def collide_bottom(self, wall):
-        return self.rect.colliderect(wall.rect_top)
+    def collide_bottom(self, zombie):
+        return self.rect.colliderect(zombie.rect_top)
 
-    def skid(self, wall):
-        self.pos_y = wall.rect.top 
+    def skid(self, zombie):
+        self.pos_y = zombie.rect.top 
         self.vel_y = 0
         self.can_jump = True
         self.image = self.images[0]
